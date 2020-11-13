@@ -6,12 +6,16 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 22:52:24 by telron            #+#    #+#             */
-/*   Updated: 2020/11/13 23:29:08 by telron           ###   ########.fr       */
+/*   Updated: 2020/11/13 23:35:17 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
 # define LIST_H
+
+/*
+** Structure
+*/
 
 typedef struct		s_list
 {
