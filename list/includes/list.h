@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 22:52:24 by telron            #+#    #+#             */
-/*   Updated: 2020/12/07 15:49:46 by telron           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:09:44 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 ** Добавить элемент new в конец связного списка lst
 */
 void				ft_lstadd_back(t_list **lst, t_list *new);
+
+/*
+** Добавить новый элемент с content, в конец связного списка lst,
+** возвращает новый элемент
+*/
+t_list				*ft_lstadd_back_content(t_list **lst, void *content);
 
 /*
 ** Добавить элемент в сортированный связный список,
