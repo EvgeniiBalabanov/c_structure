@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 22:52:24 by telron            #+#    #+#             */
-/*   Updated: 2020/12/01 04:10:16 by telron           ###   ########.fr       */
+/*   Updated: 2020/12/07 15:45:28 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 ** если функция выдаст число больше 0 при (new, elem),
 ** new поставиться перед elem
 */
-void ft_lstadd_sort(t_list **lst, t_list *new, int (*f)(void *, void *));
+void				ft_lstadd_sort(t_list **lst, t_list *new,
+						int (*f)(void *, void *));
 
 /*
 ** Посчитать количество элементов в списке lst
@@ -68,6 +69,12 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 ** Применить Функцию f ко всем элементам списка lst
 */
 void				ft_lstiter(t_list *lst, void (*f)(void *));
+
+/*
+** Применить Функцию f, принимающая индекс листа и контент,
+** ко всем элементам списка lst
+*/
+void				ft_lstiteri(t_list *lst, void (*f)(size_t, void *));
 
 /*
 ** Создать новый связный список из списка lst,
