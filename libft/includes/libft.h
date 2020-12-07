@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 12:44:10 by telron            #+#    #+#             */
-/*   Updated: 2020/11/25 19:31:09 by telron           ###   ########.fr       */
+/*   Updated: 2020/12/07 08:06:27 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,11 @@ char				*ft_strnstr(\
 ** предварительно убирая символы isspace в начале
 */
 int					ft_atoi(char *string);
+
+/*
+** Сравнивает строки str1 и str2
+*/
+int				ft_strcmp(const char *str1, const char *str2);
 
 /*
 ** Сравнивает строки str1 и str2, не более size символов

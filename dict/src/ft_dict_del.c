@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_delete_bonus.c                                :+:      :+:    :+:   */
+/*   ft_dict_del.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 06:24:19 by telron            #+#    #+#             */
-/*   Updated: 2020/11/13 23:32:46 by telron           ###   ########.fr       */
+/*   Created: 2020/12/07 07:39:07 by telron            #+#    #+#             */
+/*   Updated: 2020/12/07 07:39:09 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,4 @@ void	ft_dict_del(t_dict *dict, const char *key)
 		last = elem;
 		elem = elem->next;
 	}
-}
-
-void	ft_dict_clean(t_dict *dict)
-{
-	char	**keys;
-
-	keys = ft_dict_get_keys(dict);
-	while (*keys)
-	{
-		ft_dict_del(dict, *keys);
-		keys++;
-	}
-}
-
-void	ft_dict_rem(t_dict *dict)
-{
-	ft_dict_clean(dict);
-	free(dict);
 }
