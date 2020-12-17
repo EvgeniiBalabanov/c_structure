@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 12:44:10 by telron            #+#    #+#             */
-/*   Updated: 2020/12/07 08:06:27 by telron           ###   ########.fr       */
+/*   Updated: 2020/12/17 16:10:05 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ int					ft_atoi(char *string);
 /*
 ** Сравнивает строки str1 и str2
 */
-int				ft_strcmp(const char *str1, const char *str2);
+int					ft_strcmp(const char *str1, const char *str2);
 
 /*
 ** Сравнивает строки str1 и str2, не более size символов
@@ -195,6 +195,11 @@ int					ft_tolower(int argument);
 ** инициализируя память нулями
 */
 void				*ft_calloc(size_t nitems, size_t size);
+
+/*
+** Возвращает адрес на выделеную память размером size, заполненый из content
+*/
+void				*ft_malloc_content(void *content, size_t size);
 
 /*
 ** PART_2_FUNCTIONS
