@@ -6,15 +6,15 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 07:48:07 by telron            #+#    #+#             */
-/*   Updated: 2020/12/07 07:48:20 by telron           ###   ########.fr       */
+/*   Updated: 2020/12/17 15:57:30 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dict.h"
 
-t_dict		*ft_dict_init_pro(size_t max_elem)
+t_dict	*ft_dict_init_pro(size_t max_elem)
 {
-	t_dict *result;
+	t_dict	*result;
 
 	result = (t_dict *)malloc(sizeof(t_dict));
 	if (!result)
@@ -34,7 +34,7 @@ t_dict		*ft_dict_init_pro(size_t max_elem)
 	return (result);
 }
 
-t_dict				*ft_dict_init(void)
+t_dict	*ft_dict_init(void)
 {
 	return (ft_dict_init_pro(8));
 }
