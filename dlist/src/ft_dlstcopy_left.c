@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstadd_right_content.c                         :+:      :+:    :+:   */
+/*   ft_dlstcopy_left.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 16:05:02 by telron            #+#    #+#             */
-/*   Updated: 2020/12/17 16:03:02 by telron           ###   ########.fr       */
+/*   Created: 2020/12/08 04:48:47 by telron            #+#    #+#             */
+/*   Updated: 2020/12/17 16:03:17 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dlist.h"
 
-t_dlist	*ft_dlstadd_right_content(t_dlist **dlst, void *content)
+t_dlist		*ft_dlstcopy_left(t_dlist *dlist, void (*del)(void *))
 {
-	t_dlist	*old_elem;
-	t_dlist	*new;
+	t_dlist	*result;
 
-	new = ft_dlstnew(content);
-	if (new)
+	result = 0;
+	while (dlist)
 	{
-		old_elem = ft_dlstright(*dlst);
-		if (!old_elem)
-			*dlst = new;
-		else
-			old_elem->right = new;
-		new->left = old_elem;
+		if (!ft_dlstadd_left_content(&result, dlist->content))
+		{
+			ft_dlstclear(&result, del);
+			return (0);
+		}
+		dlist = dlist->left;
 	}
-	return (new);
+	return (result);
 }
