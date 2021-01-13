@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 12:57:47 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 13:03:54 by telron           ###   ########.fr       */
+/*   Updated: 2021/01/13 21:13:47 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 
 	len = ft_strlen(dst);
 	if (size > len)
-		ft_strlcpy(dst + len, src, size - len);
-	return ((len > size ? size : len) + ft_strlen(src));
+		return (len + ft_strlcpy(dst + len, src, size - len));
+	return (size + ft_strlen(src));
 }

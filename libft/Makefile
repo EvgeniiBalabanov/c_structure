@@ -1,10 +1,10 @@
 .PHONY:	all clean fclean re
 
-NAME		=	libft.o
+NAME		=	libft.a
 
 CC			=	gcc
 
-CFLAGS		=	-Wall -Wextra -Werror -I./includes
+CFLAGS		=	-Wall -Wextra -Werror -I./includes -O3
 
 NAME_FILES	=	ft_atoi.c ft_isalpha.c ft_itoa.c ft_memcpy.c ft_putendl_fd.c\
 				ft_strchr.c ft_strlcpy.c ft_strnstr.c ft_tolower.c ft_bzero.c\
