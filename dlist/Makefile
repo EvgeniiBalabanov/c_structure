@@ -1,6 +1,6 @@
 .PHONY:	all clean fclean re
 
-NAME		=	dlist.o
+NAME		=	libdlist.o
 
 CC			=	gcc
 

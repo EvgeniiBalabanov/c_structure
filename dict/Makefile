@@ -1,10 +1,10 @@
-.PHONY:	all clean fclean re
+.PHONY:			all clean fclean re
 
-NAME		=	dict.o
+NAME		=	libdict.a
 
 CC			=	gcc
 
-CFLAGS		=	-Wall -Wextra -Werror -I./includes -I../libft/includes
+CFLAGS		=	-Wall -Wextra -Werror -I ./includes -I ../libft/includes
 
 NAME_FILES	=	ft_dict_add.c ft_dict_elem_add_back.c\
 				ft_dict_get_elem_by_key.c ft_dict_rem.c ft_dict_clean.c\
