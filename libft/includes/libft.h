@@ -6,7 +6,7 @@
 /*   By: e.balabanov <e.balabanov@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 12:44:10 by telron            #+#    #+#             */
-/*   Updated: 2021/02/17 12:40:36 by e.balabanov      ###   ########.fr       */
+/*   Updated: 2021/02/17 23:38:22 by e.balabanov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ char				*ft_strnstr(\
 ** Берёт string и конвертирует её в тип int,
 ** предварительно убирая символы isspace в начале
 */
-int					ft_atoi(char *string);
+int					ft_atoi(const char *string);
 
 /*
 ** Сравнивает строки str1 и str2
