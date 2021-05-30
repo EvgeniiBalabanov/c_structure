@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 21:05:11 by telron            #+#    #+#             */
-/*   Updated: 2020/11/07 00:29:35 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:58:26 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 
 char	*ft_strrchr(const char *string, int c_pattern)
 {
-	char *result;
+	char	*result;
 
 	result = 0;
 	if (!c_pattern)

@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 17:04:02 by telron            #+#    #+#             */
-/*   Updated: 2020/11/03 15:14:39 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:48:02 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int num)
 
 	counter_arr = 14;
 	arr[counter_arr--] = 0;
-	positive = num < 0 ? -1 : 1;
+	positive = -1 + (num >= 0) * 2;
 	if (!num)
 		arr[counter_arr--] = '0';
 	while (num)

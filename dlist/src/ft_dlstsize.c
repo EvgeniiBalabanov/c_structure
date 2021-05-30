@@ -6,13 +6,13 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 16:04:34 by telron            #+#    #+#             */
-/*   Updated: 2021/01/17 06:19:24 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:42:07 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dlist.h"
 
-int		ft_dlstsize(t_dlist *dlst)
+int	ft_dlstsize(t_dlist *dlst)
 {
 	int	result;
 

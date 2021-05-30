@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 15:11:02 by telron            #+#    #+#             */
-/*   Updated: 2020/11/07 02:53:37 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:01:30 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 
 static size_t	ft_strlen_c(const char *str, const char sep)
 {
-	size_t counter;
+	size_t	counter;
 
 	counter = 0;
 	while (str[counter] && str[counter] != sep)
@@ -51,13 +51,15 @@ static size_t	ft_strlen_c(const char *str, const char sep)
 ** 		в случае ошибки выделения памяти вернёт 0
 */
 
-static int		ft_strcdup(char **dst, const char *src, char sep)
+static int	ft_strcdup(char **dst, const char *src, char sep)
 {
-	size_t counter;
+	size_t	counter;
 
 	counter = ft_strlen_c(src, sep);
 	*dst = ft_substr(src, 0, counter);
-	return (*dst != 0 ? counter : 0);
+	if (*dst)
+		return (counter);
+	return (0);
 }
 
 /*
@@ -76,7 +78,7 @@ static int		ft_strcdup(char **dst, const char *src, char sep)
 
 static size_t	ft_count_str(const char *str, char sep)
 {
-	size_t counter;
+	size_t	counter;
 
 	counter = 0;
 	while (*str)
@@ -100,9 +102,9 @@ static size_t	ft_count_str(const char *str, char sep)
 ** 		потом сам массив указателей.
 */
 
-static void		ft_delete_strings(char **strings)
+static void	ft_delete_strings(char **strings)
 {
-	size_t counter;
+	size_t	counter;
 
 	counter = 0;
 	while (strings && strings[counter])
@@ -148,7 +150,7 @@ static void		ft_delete_strings(char **strings)
 ** 		В случае неудачи (при выделении памяти) вернёт NULL
 */
 
-char			**ft_split(const char *str, char sep)
+char	**ft_split(const char *str, char sep)
 {
 	char	**result;
 	int		counter_result;
@@ -166,13 +168,13 @@ char			**ft_split(const char *str, char sep)
 			str++;
 		if (!*str)
 			break ;
-		if ((plus_str = ft_strcdup(result + counter_result++, str, sep)))
-			str += plus_str;
-		else
+		plus_str = ft_strcdup(result + counter_result++, str, sep);
+		if (!plus_str)
 		{
 			ft_delete_strings(result);
 			return ((char **)0);
 		}
+		str += plus_str;
 	}
 	return (result);
 }

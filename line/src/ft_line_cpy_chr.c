@@ -6,13 +6,13 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 02:07:04 by telron            #+#    #+#             */
-/*   Updated: 2021/01/15 02:37:31 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:31:50 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "line.h"
 
-t_line		*ft_line_cpy_chr(t_line *destination, char sourse)
+t_line	*ft_line_cpy_chr(t_line *destination, char sourse)
 {
 	size_t	new_size_allocated;
 	char	*buf;
@@ -24,7 +24,8 @@ t_line		*ft_line_cpy_chr(t_line *destination, char sourse)
 		new_size_allocated = 16;
 	if (destination->allocated != new_size_allocated)
 	{
-		if (!(buf = (char *)malloc(new_size_allocated)))
+		buf = (char *)malloc(new_size_allocated);
+		if (!buf)
 			return ((t_line *)0);
 		free(destination->string);
 		destination->string = buf;

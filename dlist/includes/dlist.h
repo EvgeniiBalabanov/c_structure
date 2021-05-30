@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 22:52:24 by telron            #+#    #+#             */
-/*   Updated: 2020/12/17 16:06:39 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:38:12 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 
-typedef struct		s_dlist
+typedef struct s_dlist
 {
 	struct s_dlist	*left;
 	void			*content;
@@ -55,8 +55,9 @@ t_dlist				*ft_dlstadd_left_content(t_dlist **dlst, void *content);
 ** если функция выдаст число больше 0 при (new, elem),
 ** new поставиться перед elem
 */
-void				ft_dlstadd_sort(t_dlist **dlst, t_dlist *new,
-						int (*f)(void *, void *));
+void				ft_dlstadd_sort(t_dlist **dlst, \
+									t_dlist *new, \
+									int (*f)(void *, void *));
 
 /*
 ** Сделать взаимосвязь между left и right
@@ -66,8 +67,9 @@ void				ft_dlstrelation(t_dlist *left, t_dlist *right);
 /*
 ** Вставить элемент center между left и right
 */
-void				ft_dlstinsert(t_dlist *left, t_dlist *center,\
-									t_dlist *right);
+void				ft_dlstinsert(t_dlist *left, \
+								t_dlist *center, \
+								t_dlist *right);
 
 /*
 ** Посчитать количество всех элементов в списке dlst
@@ -153,8 +155,8 @@ void				ft_dlstiteri(t_dlist *dlst, void (*f)(size_t, void *));
 ** применение будет идти слева направо,
 ** аргументная функция дополнительно принимает индекс листа (dlst - 0 индекс)
 */
-void				ft_dlstiteri_right(t_dlist *dlst,\
-								void (*f)(size_t, void *));
+void				ft_dlstiteri_right(t_dlist *dlst, \
+									void (*f)(size_t, void *));
 
 /*
 ** Копирует левую часть двухсвязного списка из списка dlist включительно,
@@ -173,7 +175,26 @@ t_dlist				*ft_dlstcopy_right(t_dlist *dlist, void (*del)(void *));
 ** применив к каждому элементу функцию f
 ** в случае неудачи, применяет функцию del
 */
-t_dlist				*ft_dlstmap(t_dlist *lst, void *(*f)(void *),\
+t_dlist				*ft_dlstmap(t_dlist *lst, void *(*f)(void *), \
 								void (*del)(void *));
+
+/*
+** Находит елемент в двухсвязном списке, который устраивает функцию ft_cmp
+** в которую подаётся content и value
+*/
+t_dlist				*ft_dlstget( \
+								t_dlist *dlist, \
+								void *value, \
+								int (*ft_cmp)(void *, void *));
+
+/*
+** Достаёт контент елемента из двухсвязного списка,
+** который устраивает функцию ft_cmp
+** в которую подаётся content и value
+*/
+void				*ft_dlstget_content(\
+								t_dlist *dlist, \
+								void *value, \
+								int (*ft_cmp)(void *, void *));
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:49:38 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 21:17:41 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:04:02 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 
 void	*ft_bzero(void *destination, size_t size)
 {
-	unsigned char *result;
+	unsigned char	*result;
 
 	result = (unsigned char *)destination;
 	while (size--)

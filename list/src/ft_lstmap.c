@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 16:28:39 by telron            #+#    #+#             */
-/*   Updated: 2020/11/13 23:29:58 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 20:18:26 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *result;
-	t_list *elem;
+	t_list	*result;
+	t_list	*elem;
 
 	result = 0;
 	if (!f)

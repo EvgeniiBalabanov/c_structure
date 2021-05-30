@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 15:37:32 by telron            #+#    #+#             */
-/*   Updated: 2020/11/05 20:35:17 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:50:48 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,19 @@
 
 void	*ft_memmove(void *destination, const void *source, size_t size)
 {
-	size_t counter;
-	size_t index;
+	size_t	counter;
+	size_t	index;
 
 	if (!destination && !source)
 		return (0);
 	counter = 0;
 	while (counter < size)
 	{
-		index = destination < source ? counter : size - counter - 1;
-		((unsigned char *)destination)[index] =\
+		if (destination < source)
+			index = counter;
+		else
+			index = size - counter - 1;
+		((unsigned char *)destination)[index] = \
 			((unsigned char *)source)[index];
 		counter++;
 	}

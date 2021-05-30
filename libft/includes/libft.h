@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 12:44:10 by telron            #+#    #+#             */
-/*   Updated: 2021/03/10 03:03:44 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:45:11 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,17 @@ void				*ft_bzero(void *destination, size_t size);
 ** Копирует данные из source в destination размером size
 */
 void				*ft_memcpy(\
-						void *destination,\
-						const void *source,\
+						void *destination, \
+						const void *source, \
 						size_t size);
 
 /*
 ** Копирует данные из source в destination до value символа, не более size байт
 */
 void				*ft_memccpy(\
-						void *destination,\
-						const void *source,\
-						int value,\
+						void *destination, \
+						const void *source, \
+						int value, \
 						size_t size);
 
 /*
@@ -63,8 +63,8 @@ void				*ft_memchr(const void *pointer, int value, size_t size);
 ** Сравнивает 2 участка пямяти mem_first и mem_second на протяжении size байт
 */
 int					ft_memcmp(\
-						const void *mem_first,\
-						const void *mem_second,\
+						const void *mem_first, \
+						const void *mem_second, \
 						size_t size);
 
 /*
@@ -72,8 +72,8 @@ int					ft_memcmp(\
 ** с защитой от перекрытия
 */
 void				*ft_memmove(\
-						void *destination,\
-						const void *source,\
+						void *destination, \
+						const void *source, \
 						size_t size);
 
 /*
@@ -111,8 +111,8 @@ char				*ft_strrchr(const char *str, int argument);
 ** на первый элемент данного вхождения
 */
 char				*ft_strnstr(\
-						const char *string,\
-						const char *pattern,\
+						const char *string, \
+						const char *pattern, \
 						size_t count);
 
 /*
@@ -127,11 +127,16 @@ int					ft_atoi(const char *string);
 int					ft_strcmp(const char *str1, const char *str2);
 
 /*
+** Сравнивает строки str1 и str2, игнорируя регистры (upper/lower case)
+*/
+int					ft_strcmp_i(const char *str1, const char *str2);
+
+/*
 ** Сравнивает строки str1 и str2, не более size символов
 */
 int					ft_strncmp(\
-						const char *str1,\
-						const char *str2,\
+						const char *str1, \
+						const char *str2, \
 						size_t size);
 
 /*
@@ -216,8 +221,8 @@ void				*ft_malloc_content(void *content, size_t size);
 ** начиная с индекса start, размером size (длина строки без 0-терминатора)
 */
 char				*ft_substr(\
-						char const *str,\
-						unsigned int start,\
+						char const *str, \
+						unsigned int start, \
 						size_t size);
 
 /*

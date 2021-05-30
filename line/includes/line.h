@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 23:01:45 by telron            #+#    #+#             */
-/*   Updated: 2021/01/28 22:59:09 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:11:42 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include "libft.h"
 
-typedef struct	s_line
+typedef struct s_line
 {
 	char		*string;
 	size_t		allocated;
@@ -89,6 +89,16 @@ t_line			*ft_line_add_str(t_line *line, const char *string);
 t_line			*ft_line_add_line(t_line *line, t_line *tail);
 
 /*
+** Добавить отрезок из линии sub_line в конец destination,
+** начиная с start_index, заканчивая stop_index
+*/
+t_line			*ft_line_add_sub_line(\
+						t_line *destination, \
+						t_line *sub_line, \
+						size_t start_index, \
+						size_t stop_index);
+
+/*
 ** Копировать в линию destination символ sourse
 */
 t_line			*ft_line_cpy_chr(t_line *destination, char sourse);
@@ -116,7 +126,13 @@ t_line			*ft_line_cut_index(t_line *line, size_t index);
 /*
 ** Создаёт новый t_line из line, обрезанный по индексам start_index и stop_index
 */
-t_line			*ft_line_sub_line(t_line *line, size_t start_index,\
+t_line			*ft_line_sub_line(t_line *line, \
+							size_t start_index, \
 							size_t stop_index);
+
+/*
+** Функция для нахождения количества байт, требуемыех для string в t_line
+*/
+size_t			ft_line_get_count_byte_allocate(size_t need_byte);
 
 #endif

@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_content.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 16:51:04 by telron            #+#    #+#             */
-/*   Updated: 2021/05/30 18:54:37 by telron           ###   ########.fr       */
+/*   Created: 2021/04/19 04:16:09 by telron            #+#    #+#             */
+/*   Updated: 2021/05/30 20:14:48 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "list.h"
 
-char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
+t_list	*ft_lstadd_front_content(t_list **lst, void *content)
 {
-	unsigned int	counter;
-	char			*result;
+	t_list	*new;
 
-	if (!str || !f)
-		return ((char *)0);
-	result = (char *)malloc(ft_strlen(str) + 1);
-	if (!result)
-		return ((char *)0);
-	counter = 0;
-	while (str[counter])
-	{
-		result[counter] = f(counter, str[counter]);
-		counter++;
-	}
-	result[counter] = '\0';
-	return (result);
+	new = ft_lstnew(content);
+	if (new)
+		ft_lstadd_front(lst, new);
+	return (new);
 }

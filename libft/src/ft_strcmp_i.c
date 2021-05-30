@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp_i.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 16:51:04 by telron            #+#    #+#             */
-/*   Updated: 2021/05/30 18:54:37 by telron           ###   ########.fr       */
+/*   Created: 2021/04/15 19:56:16 by telron            #+#    #+#             */
+/*   Updated: 2021/05/30 19:07:24 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
+int	ft_strcmp_i(const char *str1, const char *str2)
 {
-	unsigned int	counter;
-	char			*result;
-
-	if (!str || !f)
-		return ((char *)0);
-	result = (char *)malloc(ft_strlen(str) + 1);
-	if (!result)
-		return ((char *)0);
-	counter = 0;
-	while (str[counter])
+	while (*str1 || *str2)
 	{
-		result[counter] = f(counter, str[counter]);
-		counter++;
+		if (ft_tolower(*str1) != ft_tolower(*str2))
+			return ((unsigned char)(*str1) - (unsigned char)(*str2));
+		str1++;
+		str2++;
 	}
-	result[counter] = '\0';
-	return (result);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:46:31 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 17:15:16 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:03:04 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 ** 		тогда возвращается 1, иначе 0
 */
 
-int			ft_isprint(int argument)
+int	ft_isprint(int argument)
 {
 	return (32 <= argument && argument <= 126);
 }

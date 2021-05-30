@@ -6,5 +6,8 @@ define		makes
 	done
 endef
 
+all:
+	$(call makes, )
+
 fclean:
 	$(call makes, fclean)

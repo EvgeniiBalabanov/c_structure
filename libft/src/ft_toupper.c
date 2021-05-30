@@ -6,13 +6,13 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:06:38 by telron            #+#    #+#             */
-/*   Updated: 2020/11/03 09:26:39 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:02:21 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_toupper(int argument)
+int	ft_toupper(int argument)
 {
-	return (('a' <= argument && argument <= 'z') ? argument - 32 : argument);
+	return (argument - 32 * ('a' <= argument && argument <= 'z'));
 }

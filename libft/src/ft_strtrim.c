@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 17:53:31 by telron            #+#    #+#             */
-/*   Updated: 2020/11/25 23:47:30 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:54:31 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@
 ** 			3) Память под строку не была выделена
 */
 
-char		*ft_strtrim(char const *str, char const *pattern)
+char	*ft_strtrim(char const *str, char const *pattern)
 {
-	size_t start;
-	size_t len;
+	size_t	start;
+	size_t	len;
 
 	if (!str || !pattern)
 		return ((char *)0);
@@ -54,7 +54,7 @@ char		*ft_strtrim(char const *str, char const *pattern)
 	while (str[start] && ft_strchr(pattern, str[start]))
 		start++;
 	len = ft_strlen(str + start);
-	while (len && str[len + start - 1] &&\
+	while (len && str[len + start - 1] && \
 		ft_strchr(pattern, str[len + start - 1]))
 		len--;
 	return (ft_substr(str, start, len));

@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 18:57:19 by telron            #+#    #+#             */
-/*   Updated: 2020/11/01 10:05:17 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:04:32 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putnbr_fd(int num, int fd)
 
 	counter_arr = 14;
 	arr[counter_arr--] = 0;
-	positive = num < 0 ? -1 : 1;
+	positive = -1 + (num >= 0) * 2;
 	if (!num)
 		arr[counter_arr--] = '0';
 	while (num)

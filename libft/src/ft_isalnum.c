@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:42:43 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 17:10:44 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:48:21 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** 		вернётся 1, иначе 0
 */
 
-int		ft_isalnum(int argument)
+int	ft_isalnum(int argument)
 {
 	return (ft_isalpha(argument) || ft_isdigit(argument));
 }

@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_line_get_count_byte_allocate.c                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 16:51:04 by telron            #+#    #+#             */
-/*   Updated: 2021/05/30 18:54:37 by telron           ###   ########.fr       */
+/*   Created: 2021/03/24 11:29:52 by telron            #+#    #+#             */
+/*   Updated: 2021/05/30 19:14:07 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "line.h"
 
-char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
+size_t	ft_line_get_count_byte_allocate(size_t need_byte)
 {
-	unsigned int	counter;
-	char			*result;
+	size_t	counter;
 
-	if (!str || !f)
-		return ((char *)0);
-	result = (char *)malloc(ft_strlen(str) + 1);
-	if (!result)
-		return ((char *)0);
-	counter = 0;
-	while (str[counter])
-	{
-		result[counter] = f(counter, str[counter]);
-		counter++;
-	}
-	result[counter] = '\0';
-	return (result);
+	counter = 16;
+	while (need_byte > counter)
+		counter *= 2;
+	return (counter);
 }

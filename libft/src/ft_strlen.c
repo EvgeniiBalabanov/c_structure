@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:15:34 by telron            #+#    #+#             */
-/*   Updated: 2020/11/25 19:31:25 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:05:06 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 
 size_t	ft_strlen(const char *string)
 {
-	size_t counter;
+	size_t	counter;
 
 	counter = 0;
 	while (string[counter])

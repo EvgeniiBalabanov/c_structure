@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 22:52:24 by telron            #+#    #+#             */
-/*   Updated: 2020/12/07 16:09:44 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 20:11:40 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -30,6 +30,12 @@ t_list				*ft_lstnew(void *content);
 ** Добавить элемент new, в начало связного списка lst
 */
 void				ft_lstadd_front(t_list **lst, t_list *new);
+
+/*
+** Добавить новый элемент с content, в начало связного списка lst,
+** возвращает новый элемент
+*/
+t_list				*ft_lstadd_front_content(t_list **lst, void *content);
 
 /*
 ** Добавить элемент new в конец связного списка lst
@@ -88,8 +94,8 @@ void				ft_lstiteri(t_list *lst, void (*f)(size_t, void *));
 ** в случае неудачи, применяет функцию del
 */
 t_list				*ft_lstmap(\
-						t_list *lst,\
-						void *(*f)(void *),\
+						t_list *lst, \
+						void *(*f)(void *), \
 						void (*del)(void *));
 
 #endif

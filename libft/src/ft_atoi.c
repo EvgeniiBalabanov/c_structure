@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 23:45:25 by telron            #+#    #+#             */
-/*   Updated: 2020/11/25 19:31:00 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:48:28 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 ** 		Полученый int в результате конвертации
 */
 
-int		ft_atoi(const char *string)
+int	ft_atoi(const char *string)
 {
 	int		positive;
 	size_t	result;

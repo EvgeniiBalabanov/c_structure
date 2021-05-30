@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 15:46:39 by telron            #+#    #+#             */
-/*   Updated: 2020/11/06 23:07:51 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:06:08 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (size)
 	{
 		end_res = ft_memccpy(dst, src, 0, size - 1);
-		len_with_end = end_res ? (size_t)(end_res - dst) : size;
+		len_with_end = size;
+		if (end_res)
+			len_with_end = (size_t)(end_res - dst);
 		dst[len_with_end - 1] = 0;
 	}
 	return (ft_strlen(src));

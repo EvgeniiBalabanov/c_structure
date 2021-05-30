@@ -6,13 +6,13 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 23:29:23 by telron            #+#    #+#             */
-/*   Updated: 2021/01/15 07:28:59 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:29:37 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "line.h"
 
-t_line		*ft_line_mem_up(t_line *line, size_t size)
+t_line	*ft_line_mem_up(t_line *line, size_t size)
 {
 	char	*for_free;
 	char	*alloc_memmory;

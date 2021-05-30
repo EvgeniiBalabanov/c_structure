@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:38:12 by telron            #+#    #+#             */
-/*   Updated: 2020/11/05 13:53:55 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:57:52 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 
 void	*ft_memset(void *destination, int value, size_t size)
 {
-	unsigned char *result;
+	unsigned char	*result;
 
 	result = (unsigned char *)destination;
 	while (size--)

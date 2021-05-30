@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 15:17:09 by telron            #+#    #+#             */
-/*   Updated: 2021/02/28 15:18:07 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:30:14 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 # define DICT_TEST_H
 
 # include "dict.h"
+# include <stdio.h>
 
 #endif

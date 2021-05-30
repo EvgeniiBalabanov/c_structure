@@ -6,13 +6,13 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 04:48:47 by telron            #+#    #+#             */
-/*   Updated: 2020/12/17 16:03:17 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:40:21 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dlist.h"
 
-t_dlist		*ft_dlstcopy_left(t_dlist *dlist, void (*del)(void *))
+t_dlist	*ft_dlstcopy_left(t_dlist *dlist, void (*del)(void *))
 {
 	t_dlist	*result;
 

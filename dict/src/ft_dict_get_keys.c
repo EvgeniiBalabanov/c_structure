@@ -6,23 +6,22 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 07:51:16 by telron            #+#    #+#             */
-/*   Updated: 2021/02/28 15:10:18 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:20:28 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dict.h"
 
-static void			ft_zeroing_static(size_t *counter, t_dict_elem **elem)
+static void	ft_zeroing_static(size_t *counter, t_dict_elem **elem)
 {
 	*counter = 0;
 	*elem = 0;
 }
 
-const char			*ft_dict_iter_keys(t_dict *dict)
+int	ft_dict_iter_keys(t_dict *dict, char **key)
 {
 	static size_t		counter_in_hash_table = 0;
-	static t_dict_elem	*elem_now;
-	const char			*key;
+	static t_dict_elem	*elem_now = 0;
 
 	if (!dict)
 	{
@@ -35,10 +34,11 @@ const char			*ft_dict_iter_keys(t_dict *dict)
 		{
 			if (!elem_now)
 				elem_now = dict->hash_table[counter_in_hash_table];
-			key = elem_now->key;
-			if (!(elem_now = (t_dict_elem *)elem_now->list.next))
+			*key = (char *)elem_now->key;
+			elem_now = (t_dict_elem *)elem_now->list.next;
+			if (!elem_now)
 				counter_in_hash_table++;
-			return (key);
+			return (1);
 		}
 		counter_in_hash_table++;
 	}
@@ -46,11 +46,10 @@ const char			*ft_dict_iter_keys(t_dict *dict)
 	return (0);
 }
 
-void				*ft_dict_iter_value(t_dict *dict)
+int	ft_dict_iter_value(t_dict *dict, void **value)
 {
 	static size_t		counter_in_hash_table = 0;
-	static t_dict_elem	*elem_now;
-	void				*value;
+	static t_dict_elem	*elem_now = 0;
 
 	if (!dict)
 	{
@@ -63,10 +62,11 @@ void				*ft_dict_iter_value(t_dict *dict)
 		{
 			if (!elem_now)
 				elem_now = dict->hash_table[counter_in_hash_table];
-			value = elem_now->list.content;
-			if (!(elem_now = (t_dict_elem *)elem_now->list.next))
+			*value = elem_now->list.content;
+			elem_now = (t_dict_elem *)elem_now->list.next;
+			if (!elem_now)
 				counter_in_hash_table++;
-			return (value);
+			return (1);
 		}
 		counter_in_hash_table++;
 	}
@@ -74,14 +74,15 @@ void				*ft_dict_iter_value(t_dict *dict)
 	return (0);
 }
 
-char				**ft_dict_get_keys(t_dict *dict)
+char	**ft_dict_get_keys(t_dict *dict)
 {
 	char		**keys;
 	size_t		counter;
 	size_t		counter_keys;
 	t_dict_elem	*buf;
 
-	if (!(keys = (char **)ft_calloc(dict->count_elem + 1, sizeof(char *))))
+	keys = (char **)ft_calloc(dict->count_elem + 1, sizeof(char *));
+	if (!keys)
 		return ((char **)0);
 	counter = 0;
 	counter_keys = 0;

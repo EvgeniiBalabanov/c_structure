@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 07:39:07 by telron            #+#    #+#             */
-/*   Updated: 2021/02/28 15:12:57 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 17:53:51 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_dict_del(t_dict *dict, const char *key)
 {
-	t_dict_elem *elem;
-	t_dict_elem *last;
+	t_dict_elem	*elem;
+	t_dict_elem	*last;
 	size_t		index;
 
 	index = ft_dict_hash_function(key, dict->max_elem);

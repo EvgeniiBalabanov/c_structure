@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 12:48:16 by telron            #+#    #+#             */
-/*   Updated: 2021/01/04 20:06:13 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:58:04 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 ** 		вернётся 1, иначе 0
 */
 
-int		ft_isalpha(int argument)
+int	ft_isalpha(int argument)
 {
 	argument &= -33;
 	return ('A' <= argument && argument <= 'Z');

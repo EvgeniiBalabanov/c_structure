@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 16:18:40 by telron            #+#    #+#             */
-/*   Updated: 2020/12/08 00:38:47 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:39:12 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_dlstclear_right(t_dlist **dlst, void (*del)(void*))
 {
-	t_dlist *buf;
+	t_dlist	*buf;
 
 	while (dlst && *dlst)
 	{

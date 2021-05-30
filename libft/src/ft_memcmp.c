@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 19:42:37 by telron            #+#    #+#             */
-/*   Updated: 2020/11/06 23:10:18 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:04:59 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 ** 		Разница в первом найденном байтовом различии.
 */
 
-int		ft_memcmp(const void *mem_first, const void *mem_second, size_t size)
+int	ft_memcmp(const void *mem_first, const void *mem_second, size_t size)
 {
 	unsigned char	*uc_first;
 	unsigned char	*uc_second;

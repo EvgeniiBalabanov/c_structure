@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 00:07:56 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 13:50:13 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 18:48:37 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
-	void *result;
+	void	*result;
 
 	result = malloc(nitems * size);
 	if (!result)

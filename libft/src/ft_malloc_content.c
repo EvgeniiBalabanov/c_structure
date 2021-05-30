@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 16:01:50 by telron            #+#    #+#             */
-/*   Updated: 2020/12/14 16:05:05 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:07:10 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_malloc_content(void *content, size_t size)
 {
-	void *new;
+	void	*new;
 
 	new = malloc(size);
 	if (new)

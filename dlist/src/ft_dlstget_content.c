@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_dlstget_content.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 16:51:04 by telron            #+#    #+#             */
-/*   Updated: 2021/05/30 18:54:37 by telron           ###   ########.fr       */
+/*   Created: 2021/03/19 04:03:41 by telron            #+#    #+#             */
+/*   Updated: 2021/05/30 18:40:03 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "dlist.h"
 
-char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
+void	*ft_dlstget_content(\
+				t_dlist *dlist, \
+				void *value, \
+				int (*ft_cmp)(void *, void *))
 {
-	unsigned int	counter;
-	char			*result;
+	t_dlist	*element;
 
-	if (!str || !f)
-		return ((char *)0);
-	result = (char *)malloc(ft_strlen(str) + 1);
-	if (!result)
-		return ((char *)0);
-	counter = 0;
-	while (str[counter])
-	{
-		result[counter] = f(counter, str[counter]);
-		counter++;
-	}
-	result[counter] = '\0';
-	return (result);
+	element = ft_dlstget(dlist, value, ft_cmp);
+	if (element)
+		return (element->content);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:55:51 by telron            #+#    #+#             */
-/*   Updated: 2020/11/05 14:17:25 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:03:44 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	*ft_memcpy(void *destination, const void *source, size_t size)
 	counter = 0;
 	while (counter < size)
 	{
-		((unsigned char *)destination)[counter] =\
+		((unsigned char *)destination)[counter] = \
 			((unsigned char *)source)[counter];
 		counter++;
 	}

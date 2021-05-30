@@ -6,13 +6,13 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 07:57:54 by telron            #+#    #+#             */
-/*   Updated: 2021/01/18 09:21:15 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:29:19 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "line.h"
 
-t_line		*ft_line_add_str(t_line *line, const char *tail)
+t_line	*ft_line_add_str(t_line *line, const char *tail)
 {
 	size_t	len;
 

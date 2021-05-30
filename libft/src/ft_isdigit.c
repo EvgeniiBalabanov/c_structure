@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:33:21 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 17:01:05 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:07:15 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 ** 		тогда возвращается 1, иначе 0
 */
 
-int		ft_isdigit(int argument)
+int	ft_isdigit(int argument)
 {
 	return ('0' <= argument && argument <= '9');
 }

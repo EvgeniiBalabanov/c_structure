@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 20:01:48 by telron            #+#    #+#             */
-/*   Updated: 2020/11/05 14:26:28 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:03:14 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@
 ** 														|	0x05	0x06...|
 */
 
-void	*ft_memccpy(void *destination,\
-					const void *source,\
-					int value,\
+void	*ft_memccpy(void *destination, \
+					const void *source, \
+					int value, \
 					size_t size)
 {
 	unsigned char		*dst;

@@ -6,7 +6,7 @@
 /*   By: telron <telron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:38:34 by telron            #+#    #+#             */
-/*   Updated: 2020/11/02 16:57:37 by telron           ###   ########.fr       */
+/*   Updated: 2021/05/30 19:03:51 by telron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 ** 		тогда возвращается 1, иначе 0
 */
 
-int		ft_isascii(int argument)
+int	ft_isascii(int argument)
 {
 	return (0 <= argument && argument <= 127);
 }
